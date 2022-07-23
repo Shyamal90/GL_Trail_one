@@ -1,10 +1,12 @@
 import React from 'react'
+import {Link} from 'react-router-dom';
 import './MovieCard.scss'
 
 function MovieCard(props) {
     const {data} = props;
 
   return (
+    <Link to={`movie/${data.imdbID}`}>
     <div className='card-item'>
         <div className="card-inner">
             <div className="card-top">
@@ -18,6 +20,7 @@ function MovieCard(props) {
             </div>
         </div>
     </div>
+    </Link>
   )
 }
 
